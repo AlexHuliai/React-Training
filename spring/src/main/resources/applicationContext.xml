@@ -6,13 +6,13 @@
         http://www.springframework.org/schema/beans/spring-beans.xsd
         http://www.springframework.org/schema/context
         http://www.springframework.org/schema/context/spring-context.xsd">
-
-    <context:property-placeholder location="classpath:musicPlayer.properties"/>
-    <bean id="musicBean"
-          class="com.claim.training.ClassicalMusic"
-          factory-method="getClassicalMusic"
-    init-method="doMyInit"
-    destroy-method="doMyDestroy"/>
+    <context:component-scan base-package="com.claim.training"/>
+<!--    <context:property-placeholder location="classpath:musicPlayer.properties"/>-->
+<!--    <bean id="musicBean"-->
+<!--          class="com.claim.training.ClassicalMusic"-->
+<!--          factory-method="getClassicalMusic"-->
+<!--    init-method="doMyInit"-->
+<!--    destroy-method="doMyDestroy"/>-->
 <!--    <context:property-placeholder location="classpath:musicPlayer.properties"/>-->
 <!--    <bean id="musicBean1"-->
 <!--          scope="prototype"-->

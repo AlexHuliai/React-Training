@@ -1,19 +1,23 @@
 package com.claim.training;
 
-public class ClassicalMusic implements Music {
-    private ClassicalMusic(){
+import org.springframework.stereotype.Component;
 
+import java.util.ArrayList;
+import java.util.List;
+
+@Component
+public class ClassicalMusic implements Music {
+
+    private List<String> songs = new ArrayList<>();
+
+    {
+        songs.add("Hello Mary");
+        songs.add("MoonLight");
+        songs.add("Who knows the truth");
     }
-    public static ClassicalMusic getClassicalMusic(){
-        return new ClassicalMusic();
-    }
-    public void doMyInit(){
-        System.out.println("Doing my initialization");
-    }
-    public void doMyDestroy(){
-        System.out.println("Doing my destrction");
-    }
-    public String getSong(){
-        return "Rapsody";
+
+    @Override
+    public List<String> getSongs() {
+        return songs;
     }
 }
